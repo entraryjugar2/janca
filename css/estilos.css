@@ -1,0 +1,165 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../img/1.jpg) no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    font-family: 'Exo 2', sans-serif;
+}
+.cabecera{
+    display: block;
+    background: white;
+    height: 50px;
+}
+.logo-1{
+    width: 200px;
+    outline: none!important;
+    outline-color: transparent!important;
+    outline-width: 0!important;
+    margin: -78px 0 !important;
+}
+form{
+    margin-top: 20px;
+    width: 600px;
+    height: auto;
+    border: 0.2px solid #C7C7C7;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 2px 2px 10px #9E9E9E;
+    box-sizing: border-box;
+}
+.content{
+    display: grid;
+    place-items: center;
+}
+.logo-white{
+    width: 510px;
+    margin-top: 20px;
+}
+.init{
+    padding: 0;
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.7em;
+    line-height: 50px;
+    text-align: center;
+    color: #b4282d;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+form input{
+    width: 95%;
+    padding: 10px;
+    border-radius: 15px;
+    background: #E8E8E8;
+    color: #6C6C6C;
+    box-sizing: border-box;
+    border: none;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    outline: none;
+}
+form input::placeholder{
+    font-style: italic;
+}
+.p-user{
+    margin-left: 15px;
+    color: #535353;
+}
+.p-user2{
+    margin-left: 15px;
+    color: #b4282d;
+    text-decoration: none; 
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+.p-user2:hover{
+    text-decoration-color: #2281DA;
+    color: #2281DA;
+}
+.btn-ini{
+    padding: 11px;
+    background: #b4282d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Exo 2', sans-serif;
+    min-width: 1rem;
+    cursor: pointer;
+    width: 250px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    font-size: 17px;
+}
+.btn-ini:hover{
+    background: #cf3a3f;
+}
+.btn-2{
+    text-decoration: none;
+    text-align: center;
+    padding: 11px;
+    background: #78777a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Exo 2', sans-serif;
+    min-width: 1rem;
+    cursor: pointer;
+    width: 227px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.p-user3{
+    color: #b4282d;
+    text-decoration: underline; 
+    cursor: pointer;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+
+    
+}
+.p-user3:hover{
+    text-decoration-color: #2281DA;
+    color: #2281DA;
+}
+.logo001{
+    display: none;
+}
+.tex{
+    color: whitesmoke;
+    text-align: center;
+    margin: 5px;
+    padding-top: 10px;
+}
+@media only screen and (max-width: 1024px){
+    .content{
+        width: 100%;
+    }
+    form{
+        width: 85%;
+    }
+    .logo001{
+        display: block;
+        width: 250px;
+    }
+    .logo-white{
+        display: none;
+    }
+    .cabecera{
+        display: none;
+    }
+}
