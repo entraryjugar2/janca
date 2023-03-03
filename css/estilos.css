@@ -18,7 +18,7 @@ body{
     outline-width: 0!important;
     margin: -78px 0 !important;
 }
-form{
+.formi{
     margin-top: 20px;
     width: 600px;
     height: auto;
@@ -47,7 +47,7 @@ form{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-form input{
+.formi input{
     width: 95%;
     padding: 10px;
     border-radius: 15px;
@@ -60,7 +60,7 @@ form input{
     margin-bottom: 30px;
     outline: none;
 }
-form input::placeholder{
+.formi input::placeholder{
     font-style: italic;
 }
 .p-user{
@@ -150,12 +150,117 @@ form input::placeholder{
     font-size: 20px;
     margin-left: 20px;
 }
-
+.info-form{
+    margin-top: 100px;
+    display: grid;
+    place-items: center;
+}
+.info-form form{
+    background: rgb(211, 211, 211);
+    width: 500px;
+    height: auto;
+    border-radius: 5px;
+    
+}
+.info-form form input{
+    display: block;
+    padding: 15px;
+    width: 95%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-style: none;
+   outline-color: #b4282d;
+    
+    
+}
+.info-form form p{
+    color: rgb(53, 53, 53);
+    margin-left: 15px;
+}
+.info-form form h1 {
+    margin-left: 15px;
+}
+.info-form form a{
+    background: #8423ec;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    text-decoration: none;
+    margin: auto;
+    display: block;
+    width: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+form p {
+    margin-left: 11px;
+    color: #005AB3;
+}
+form {
+	box-sizing: border-box;
+    
+}
+form input{
+	width: 95%;
+	display: block;
+	margin: auto;
+	box-sizing: border-box;
+	margin-top: px;
+	padding: 20px;
+	border-radius: 5px;
+	border: 1px solid #cf3a3f;
+	outline-color: #b4282d;
+}
+form button{
+	width: 95%;
+	box-sizing: border-box;
+	margin: 10px;
+	padding: 15px;
+	border-radius: 5px;
+	color: white;
+	border-style: none;
+	cursor: pointer;
+    background: linear-gradient(-45deg, #cf3a3f 0%, #e76569 100%);
+}
+.span{
+	font-size: 10px;
+	margin-left: 30px; 
+	position: relative;
+	display: inline;
+	top: 8px;
+	background: white; 
+	color: white;
+	
+}
+.span span{
+	color: #7E7E7E;
+}
+.boton a p {
+	color: white;
+}
+form{
+    width: 500px;
+}
+.caja-form{
+    display: grid;
+    place-items: center;
+}
+.metodo-grip{
+    display: grid;
+    place-items: center;
+}
+.titu-1{
+    color: #b4282d;
+    text-align: center;
+}
 @media only screen and (max-width: 1024px){
     .content{
         width: 100%;
     }
-    form{
+    .formi{
         width: 85%;
     }
     .logo001{
@@ -167,5 +272,8 @@ form input::placeholder{
     }
     .cabecera{
         display: none;
+    }
+    form{
+        width: 85%;
     }
 }

